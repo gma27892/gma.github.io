@@ -1,8 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Mostra/Nascondi SQL</title>
+  <style>
+    pre {
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      padding: 15px;
+      font-family: monospace;
+      font-size: 14px;
+      overflow-x: auto;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #000000;
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-<iframe src="https://html5up.net/" width="100%" height="600"  style="border:none;"> </iframe>
+
+  <details>
+    <summary>Mostra codice SQL</summary>
+    <pre><code>
+SELECT nome, email
+FROM utenti
+WHERE attivo = 1
+ORDER BY data_registrazione DESC;
+    </code></pre>
+  </details>
+
 </body>
 </html>
